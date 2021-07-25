@@ -8,6 +8,7 @@ def config = readYaml text: """
   SVC_NAME: 'nodejs-app'
 """
 
+
 config.keySet().each {
     env."${it}" = config[it]
 }
